@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  rsa:
+    build:
+      context: ./rsa
+    restart: always
+    container_name: rahkaran-rsa
+    networks:
+      - proxyNetwork
+
+  proxy:
+    build:
+      context: ./proxy
+    depends_on:
+      - rsa
+    environment:
+      RAHKARAN_URL: "${RAHKARAN_URL}"
+      RAHKARAN_USERNAME: "${RAHKARAN_USERNAME}"
+      RAHKARAN_PASSWORD: "${RAHKARAN_PASSWORD}"
+      RAHKARAN_SALES_OFFICE_ID: "${RAHKARAN_SALES_OFFICE_ID}"
+      RSA_URL: "http://rsa:8080"
+    ports:
+      - "8182:3000"
+    restart: always
+    container_name: rahkaran-proxy
+    networks:
+      - proxyNetwork
+
+networks:
+  proxyNetwork:

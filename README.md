@@ -1,5 +1,9 @@
 
 # Rahkaran API
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/amirhooshmand/rahkaran-api/blob/main/README.md)
+[![fa](https://img.shields.io/badge/lang-fa-green.svg)](https://github.com/amirhooshmand/rahkaran-api/blob/main/README.fa.md)
+
+
 
 This repository is a reverse-engineered implementation of the Rahkaran ERP system API, widely used in Iran. The ERP app of Rahkaran was decompiled to provide access to its backend services.
 

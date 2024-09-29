@@ -101,7 +101,7 @@ docker-compose up --build
 
 After starting the proxy, you can interact with Rahkaran’s API through the following examples.
 
-### Example: Get Customer Categories
+### Example: Get Corporation
 
 To get corporation detail from Rahkaran, call the following URL:
 

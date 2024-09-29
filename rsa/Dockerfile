@@ -8,7 +8,7 @@ COPY src/ ./src/
 COPY manifest.txt ./
 
 # Compile the Java code and build the JAR file using the manifest file
-RUN javac -d ./build src/Main.java && \
+RUN javac -d ./build src/Main.java src/**/*.java  && \
     jar -cfm ./build/Main.jar manifest.txt -C build .
 
 # Expose port 8080

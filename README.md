@@ -103,13 +103,24 @@ After starting the proxy, you can interact with Rahkaran’s API through the fol
 
 ### Example: Get Customer Categories
 
-To get customer categories from Rahkaran, call the following URL:
+To get corporation detail from Rahkaran, call the following URL:
 
 ```bash
-http://localhost:8182/api/DSD/API/sales.svc/getCustomerCategories/1
+GET => http://localhost:8182/api/DSD/API/sales.svc/corporation
 ```
 
-This will return a list of customer categories from the ERP system.
+Response:
+```json
+{
+    "id": "1",
+    "name": "corporation name",
+    "code": "code",
+    "nationalCode": "national_code",
+    "economicCode": "economic_code",
+    "registerNumber": "reg. number",
+    ...
+}
+```
 
 ## Contributing
 
